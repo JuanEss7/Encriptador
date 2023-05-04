@@ -13,9 +13,9 @@ body{
 }
 .container{
     position: relative;
+    margin: 0 auto;
     top: 20px;
     display: grid;
-    margin: 0 auto;
     width: 90vw;
     height: 90vh;
     grid-template:
