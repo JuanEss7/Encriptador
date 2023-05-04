@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -26,43 +27,119 @@ body{
 }
 .caja1{
     grid-area: texto;
-    border: 1px solid;
 }
-.caja1 .texto{
+.texto{
+    background: #f3f5fc;
+    border: none;
+    outline: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    padding-left: 5px;
+}
+.texto::placeholder{
     position: absolute;
     top: 5px;
     left: 5px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
 }
 .caja2{
     grid-area: btn;
-    border: 1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .caja2 button{
     width: 40%;
-    height: 40%;
+    height: 60px;
     margin:0 10px;
     border-radius: 24px;
-
+    gap:8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size:15px;
+}
+.btn-encriptar{
+    background-color:#0A3871;
+    color:#fff;
+}
+.btn-desencriptar{
+    background-color: #D8DFE8;
+    color: #0A3871;
 }
 .caja3{
     grid-area: img;
-    border: 1px solid;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
 }
-@media  (min-widht:768px) and (max-widht: 1024px) {
+.informacion{
+    font-style: normal;
+    text-align: center;
+    font-family: 'Inter';
+}
+.texto1{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    color: #343A40;
+    margin-bottom: 10px;
+}
+.texto2{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #495057;
+
+}
+@media  screen and (max-width: 1024px) and (min-width:481px) {
     .container{
         grid-template:
-        "texto" 70%
+        "texto" 65%
         "btn" 15%
-        "img" 15% /
+        "img" 20% /
         100%;
+    }
+    .caja2{
+        gap:10px;
+        margin-bottom: 25px;
+    }
+    .caja3{
+        padding: 20px;
+    }
+    .imagen{
+        display: none;
+    }
+}
+@media screen and (max-width:480px) and (min-width:320px){
+    .container{
+        grid-template:
+        "texto" 55%
+        "btn" 25%
+        "img" 20% /
+        100%;
+    }
+    .caja2{
+        flex-direction: column;
+        gap:10px;
+        margin-bottom: 25px;
+    }
+    .caja2 button{
+        width: 100%;
     }
     .imagen{
         display: none;
