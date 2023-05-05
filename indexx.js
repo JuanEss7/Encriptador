@@ -11,13 +11,13 @@ encriptar.addEventListener("click",function(){
     .replace(/o/gi,"bfn")
     .replace(/u/gi,"byn")
     if (txt.lenght !== 0){
-        document.getElementById("texto").value = txtencriptado;
-        img.setAttribute("src", "hecho.png");
-        document.getElementById("texto1").textContent = "Texto encriptado con exito";
-        alert("Texto encriptado con exito");
+        img.style.display= "none";
+        document.getElementById("texto3").textContent = txtencriptado;
+        document.getElementById("texto1").textContent = "";
+        document.getElementById("texto2").textContent = "";
+        document.getElementById("texto").value = "";
     }
     else{
-        img.setAttribute("src", "mal.png")
         alert("Ingrese un texto")
     }
 });
@@ -30,9 +30,8 @@ desencriptar.addEventListener("click",function(){
     .replace(/bfn/gi,"o")
     .replace(/byn/gi,"u")
     if (txt.lenght !==0){
-        document.getElementById("texto").value = txtdesencriptado;
-        document.getElementById("texto1").textContent = "Texto desencriptado con exito";
-        alert("Texto desencriptado con exito");
+        document.getElementById("texto3").textContent = txtdesencriptado;
+        document.getElementById("texto").value = "";
     }
     else{
         alert("Ingrese un texto")
