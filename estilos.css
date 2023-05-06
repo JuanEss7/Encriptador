@@ -35,7 +35,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 150%;
     color: #0A3871;
     padding-left: 5px;
@@ -47,7 +47,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 150%;
     color: #0A3871;
 }
@@ -79,22 +79,27 @@ body{
     grid-area: img;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     background-color: #ffffff;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     padding: 25px;
+    width: auto;
 }
 .texto3{
     align-self: flex-start;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 15px;
     line-height: 120%;
     color: #0A3871;
+    display: none;
+    overflow: auto;
+    height: 85%;
+    width: 100%;
 }
 .informacion{
     font-style: normal;
@@ -113,10 +118,24 @@ body{
     font-size: 16px;
     line-height: 150%;
     color: #495057;
-
+}
+.btn-copiar{
+    font-family: 'Inter';
+    font-style: normal;
+    font-size:15px;
+    width: 75%;
+    height: 50px;
+    margin:0 10px;
+    border-radius: 24px;
+    display: none;
+    background-color: #fff;
+    color:#235ea7;
+    border: 1px solid #0A3871;
 }
 @media  screen and (max-width: 1024px) and (min-width:481px) {
     .container{
+        width: auto;
+        height: auto;
         grid-template:
         "texto" 65%
         "btn" 15%
@@ -125,10 +144,10 @@ body{
     }
     .caja2{
         gap:10px;
-        margin-bottom: 25px;
     }
     .caja3{
         padding: 20px;
+        height: max-content;
     }
     .imagen{
         display: none;
@@ -136,21 +155,29 @@ body{
 }
 @media screen and (max-width:480px) and (min-width:320px){
     .container{
+        width:auto;
+        height: auto;
         grid-template:
         "texto" 55%
-        "btn" 25%
-        "img" 20% /
+        "btn" 15%
+        "img" 30% /
         100%;
     }
     .caja2{
         flex-direction: column;
         gap:10px;
-        margin-bottom: 25px;
     }
     .caja2 button{
         width: 100%;
     }
+    .caja3{
+        padding: 20px;
+        height: max-content;
+    }
     .imagen{
         display: none;
+    }
+    .btn-copiar{
+        flex-wrap: wrap;
     }
 }
