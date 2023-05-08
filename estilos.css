@@ -66,14 +66,24 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-size:15px;
+    animation: all;
+    border: 1px solid;
+}
+.caja2 button:hover ,.btn-copiar:hover{
+    transform: scale(1.03);
+}
+.caja2 button:active, .btn-copiar:active{
+    transform: scale(0.9);
 }
 .btn-encriptar{
     background-color:#0A3871;
     color:#fff;
 }
+
 .btn-desencriptar{
     background-color: #D8DFE8;
     color: #0A3871;
+
 }
 .caja3{
     grid-area: img;
@@ -134,8 +144,8 @@ body{
 }
 @media  screen and (max-width: 1024px) and (min-width:481px) {
     .container{
-        width: auto;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
         grid-template:
         "texto" 65%
         "btn" 15%
@@ -143,28 +153,6 @@ body{
         100%;
     }
     .caja2{
-        gap:10px;
-    }
-    .caja3{
-        padding: 20px;
-        height: max-content;
-    }
-    .imagen{
-        display: none;
-    }
-}
-@media screen and (max-width:480px) and (min-width:320px){
-    .container{
-        width:auto;
-        height: auto;
-        grid-template:
-        "texto" 55%
-        "btn" 15%
-        "img" 30% /
-        100%;
-    }
-    .caja2{
-        flex-direction: column;
         gap:10px;
     }
     .caja2 button{
@@ -177,7 +165,35 @@ body{
     .imagen{
         display: none;
     }
+}
+@media screen and (max-width:480px) and (min-width:320px){
+    .container{
+        width:100vw;
+        height: 100vh;
+        grid-template:
+        "texto" 55%
+        "btn" 15%
+        "img" 30% /
+        100%;
+    }
+    .caja2{
+        flex-direction: column;
+        gap:10px;
+    }
+    .caja2 button{
+        width: 100%;
+        height: 100%;
+    }
+    .caja3{
+        padding: 20px;
+        height: max-content;
+    }
+    .imagen{
+        display: none;
+    }
     .btn-copiar{
+        position: relative;
         flex-wrap: wrap;
+        height: 50%;
     }
 }
