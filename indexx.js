@@ -3,7 +3,11 @@ let desencriptar = document.getElementById("btn-desencriptar");
 let copiar = document.getElementById("btn-copiar");
 
 encriptar.addEventListener("click",function(){
+<<<<<<< HEAD
     let txt = document.getElementById("texto").value;
+=======
+    let txt =document.getElementById("texto").value);
+>>>>>>> 06a64094c91d53a029d4ab67b1abad9fbe8ef0df
     let img = document.getElementById("imagen");
     let txtencriptado = txt
     .replace(/a/gi,"bcn")
