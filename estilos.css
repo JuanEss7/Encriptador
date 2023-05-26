@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,43 +8,64 @@ html{
     height: 100%;
 }
 body{
-    background: #f3f5fc;
-    min-height: 100%;
+    background-image: url(./fd.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .container{
     position: relative;
     margin: 0 auto;
-    top: 20px;
+    top: 30px;
     display: grid;
     width: 90vw;
-    height: 90vh;
+    height: 85vh;
+    gap: 10px;
     grid-template:
     "texto texto img"40%
     "texto  texto img"40%
-    "btn    btn    img"20% /
+    "texto    texto   img"20% /
      35%     35%    25%;
-    gap: 5px;
 }
 .caja1{
     grid-area: texto;
+    background: #63bda4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 25px;
+    border: 3px solid;
+    flex-direction: column;
+    
 }
 .texto{
-    background: #f3f5fc;
-    border: none;
+    background-image: url(./bmo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid;
+    border-radius: 15px;
     outline: none;
-    font-family: 'Inter';
+    width: 85%;
+    height: 70%;
+    font-family: 'Inconsolata';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 150%;
     color: #0A3871;
+    resize: none;
+}
+.texto:focus{
     padding-left: 5px;
+    backdrop-filter: blur(10px);
 }
 .texto::placeholder{
     position: absolute;
     top: 5px;
     left: 5px;
-    font-family: 'Inter';
+    font-family: 'Inconsolata';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -52,38 +73,31 @@ body{
     color: #0A3871;
 }
 .caja2{
-    grid-area: btn;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 85%;
+    height: 15%;
 }
 .caja2 button{
+    margin: 45px;
     width: 40%;
-    height: 60px;
-    margin:0 10px;
-    border-radius: 24px;
-    gap:8px;
-    font-family: 'Inter';
+    height: 60%;
+    box-shadow: 5px 5px 2px -1px black;
+    color: black;
+    font-family: 'Inconsolata';
     font-style: normal;
-    font-size:15px;
-    animation: all;
-    border: 1px solid;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
 }
-.caja2 button:hover ,.btn-copiar:hover{
-    transform: scale(1.03);
-}
-.caja2 button:active, .btn-copiar:active{
-    transform: scale(0.9);
-}
+
 .btn-encriptar{
-    background-color:#0A3871;
-    color:#fff;
+    background-color:rgb(255, 215, 0);
 }
 
 .btn-desencriptar{
-    background-color: #D8DFE8;
-    color: #0A3871;
-
+    background-color: rgb(220, 20, 60);
 }
 .caja3{
     grid-area: img;
@@ -92,20 +106,23 @@ body{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    background-color: #ffffff;
-    border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    padding: 25px;
+    backdrop-filter: blur(3px);
     width: auto;
+    border-radius: 10px;
+}
+.imagen{
+    width: 100%;
+    position: relative;
+    right: 50px;
 }
 .texto3{
     align-self: flex-start;
-    font-family: 'Inter';
+    font-family: 'Inconsolata';
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 120%;
-    color: #0A3871;
+    color: whitesmoke;
     display: none;
     overflow: auto;
     height: 85%;
@@ -114,33 +131,39 @@ body{
 .informacion{
     font-style: normal;
     text-align: center;
-    font-family: 'Inter';
+    font-family: 'Inconsolata';
 }
 .texto1{
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 650;
+    font-size: 24px;
     line-height: 120%;
-    color: #343A40;
+    color: whitesmoke;
     margin-bottom: 10px;
 }
 .texto2{
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    color: #495057;
+    color: whitesmoke;
 }
 .btn-copiar{
-    font-family: 'Inter';
+    box-shadow: 5px 5px 2px -1px black;
+    color: black;
+    font-family: 'Inconsolata';
     font-style: normal;
-    font-size:15px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
     width: 75%;
     height: 50px;
     margin:0 10px;
-    border-radius: 24px;
     display: none;
-    background-color: #fff;
-    color:#235ea7;
-    border: 1px solid #0A3871;
+    background-color: rgb(0 191 255);
+    border: 1px solid black;
+}
+.btn-copiar:hover, .btn-desencriptar:hover, .btn-encriptar:hover{
+    opacity: 0.8;
+
 }
 @media  screen and (max-width: 1024px) and (min-width:481px) {
     .container{
@@ -148,15 +171,12 @@ body{
         height: 100vh;
         grid-template:
         "texto" 65%
-        "btn" 15%
+        "texto" 15%
         "img" 20% /
         100%;
     }
-    .caja2{
-        gap:10px;
-    }
     .caja2 button{
-        width: 100%;
+        width: 50%;
     }
     .caja3{
         padding: 20px;
@@ -172,13 +192,9 @@ body{
         height: 100vh;
         grid-template:
         "texto" 55%
-        "btn" 15%
+        "texto" 15%
         "img" 30% /
         100%;
-    }
-    .caja2{
-        flex-direction: column;
-        gap:10px;
     }
     .caja2 button{
         width: 100%;

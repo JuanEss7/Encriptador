@@ -21,7 +21,7 @@ encriptar.addEventListener("click",function(){
         document.getElementById("texto").value = "";
     }
     else{
-        alert("Ingrese un texto")
+        alert("Ingrese un texto");
     }
 });
 desencriptar.addEventListener("click",function(){
@@ -43,7 +43,7 @@ desencriptar.addEventListener("click",function(){
         document.getElementById("texto").value = "";
     }
     else{
-        alert("Ingrese un texto")
+        alert("Ingrese un texto");
     }
 });
 copiar.addEventListener("click",function(){
